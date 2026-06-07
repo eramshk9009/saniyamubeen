@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mubeen ❤️ Saniya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+font-family:'Cinzel',serif;
+overflow-x:hidden;
+}
+
+.section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+position:relative;
+}
+
+.gold{
+color:#d4af37;
+}
+
+.bg{
+background:
+linear-gradient(rgba(0,0,0,.75),
+rgba(0,0,0,.75)),
+url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200');
+background-size:cover;
+background-position:center;
+}
+
+#cover{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+flex-direction:column;
+}
+
+.seal{
+width:150px;
+height:150px;
+border:4px solid #d4af37;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+h2{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.name{
+font-family:'Great Vibes',cursive;
+font-size:4rem;
+color:#d4af37;
+}
+
+.heart{
+font-size:2rem;
+margin:15px 0;
+}
+
+.card{
+width:90%;
+max-width:400px;
+padding:25px;
+border:2px solid #d4af37;
+border-radius:20px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+}
+
+.countdown{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+margin-top:20px;
+}
+
+.box{
+border:1px solid #d4af37;
+padding:15px;
+min-width:70px;
+}
+
+.box span{
+display:block;
+font-size:25px;
+color:#d4af37;
+}
+
+img{
+max-width:320px;
+border-radius:20px;
+border:3px solid #d4af37;
+box-shadow:0 0 20px rgba(212,175,55,.4);
+}
+
+.timeline{
+width:100%;
+max-width:500px;
+}
+
+.event{
+margin:20px 0;
+padding:15px;
+border-left:3px solid #d4af37;
+text-align:left;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.family{
+font-size:18px;
+line-height:35px;
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.footer{
+font-family:'Great Vibes',cursive;
+font-size:2.2rem;
+color:#d4af37;
+}
+
+.particles{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.particles span{
+position:absolute;
+display:block;
+width:4px;
+height:4px;
+background:#d4af37;
+border-radius:50%;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+}
+</style>
+</head>
+<body>
+
+<div id="cover">
+<div class="seal" onclick="openInvite()">
+<div>
+<h2 class="gold">Tap To Open</h2>
+</div>
+</div>
+</div>
+
+<section class="section bg">
+<div class="particles" id="particles"></div>
+
+<h1 class="gold fade">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْم</h1>
+
+<p class="fade">
+Together with their families
+</p>
+
+<div class="name fade">Saniya</div>
+<div class="heart fade">❤️</div>
+<div class="name fade">Mubeen</div>
+<p class="fade" style="margin-top:25px;">
+Request the honour of your presence at their Nikah Ceremony
+</p>
+</section>
+
+<section class="section">
+<div class="card fade">
+
+<h2 class="gold">You're Invited</h2>
+
+<p>Friday</p>
+
+<h1 class="gold">25 Dec 2026</h1>
+
+<h2>6:00 PM</h2>
+
+</div>
+</section>
+
+<section class="section">
+
+<h2 class="gold fade">Our Journey Begins</h2>
+
+<img src="couple.jpg" alt="Couple" class="fade">
+
+<div class="countdown fade">
+
+<div class="box">
+<span id="days">0</span>
+Days
+</div>
+
+<div class="box">
+<span id="hours">0</span>
+Hours
+</div>
+
+<div class="box">
+<span id="minutes">0</span>
+Minutes
+</div>
+
+<div class="box">
+<span id="seconds">0</span>
+Seconds
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="gold fade">Program Timeline</h2>
+
+<div class="timeline fade">
+
+<div class="event">
+5:30 PM – Guest Arrival
+</div>
+
+<div class="event">
+6:00 PM – Nikah Ceremony
+</div>
+
+<div class="event">
+7:30 PM – Dinner
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="gold fade">Venue</h2>
+
+<div class="card fade">
+
+<h3>Choti Masjid</h3>
+
+<p>Karwar</p>
+
+<a class="btn"
+target="_blank"
+href="https://maps.app.goo.gl/Y6xPNJCFo2FDNEiPA?g_st=aw">
+View Location
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="gold fade">Families</h2>
+
+<div class="family fade">
+
+<b>Bride</b><br>
+Saniya Shaikh<br>
+Daughter of Ali & Shaheen Shaikh
+
+<br><br>
+
+<b>Groom</b><br>
+Mubeen Sayed<br>
+Son of Mr. & Mrs. Sayed
+
+</div>
+
+</section>
+
+<section class="section bg">
+
+<div class="footer fade">
+Thank You
+</div>
+
+<p class="fade" style="max-width:600px;margin-top:20px;">
+We request your presence and duas on this blessed occasion.
+May Allah bless this union with love, happiness and barakah.
+</p>
+
+</section>
+
+<script>
+
+function openInvite(){
+document.getElementById('cover').style.display='none';
+}
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+
+const weddingDate=new Date("December 25, 2026 18:00:00").getTime();
+
+setInterval(()=>{
+
+const now=new Date().getTime();
+
+const distance=weddingDate-now;
+
+document.getElementById("days").innerHTML=
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML=
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML=
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML=
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+const particleContainer=document.getElementById("particles");
+
+for(let i=0;i<50;i++){
+
+const p=document.createElement("span");
+
+p.style.left=Math.random()*100+"%";
+
+p.style.animationDelay=Math.random()*10+"s";
+
+particleContainer.appendChild(p);
+}
+</script>
+
+</body>
+</html>
